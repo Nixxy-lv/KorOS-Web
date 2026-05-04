@@ -3,6 +3,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="icon" type="image/png" href="icon.png">
   <title>KorOS</title>
 </head>
@@ -19,7 +23,8 @@
   </nav>
 </header>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero fade">
   <div class="hero-card">
     <h1>The best of ALL worlds</h1>
     <p>
@@ -29,13 +34,70 @@
   </div>
 </section>
 
-<div class="down-btn">
+<div class="down-btn fade">
   <a href="https://Nixxy-lv.github.io/KorOS-Web/Install">Download</a>
 </div>
 
-<section>
+<!-- SCREENSHOT -->
+<section class="fade">
   <div class="scrsht"></div>
 </section>
+
+<!-- FEATURES -->
+<section class="features fade">
+  <div class="feature-container">
+
+    <div class="feature">
+      <div class="icon"><img src="listen.jpg"></div>
+      <h3>We listen</h3>
+      <p>We want feedback. KorOS grows with its users.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon"><img src="customization.png"></div>
+      <h3>Customizable</h3>
+      <p>Shape your system the way you want it.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon"><img src="bestofworlds.jpg"></div>
+      <h3>Scheduled Updates</h3>
+      <p>Stable updates, planned and predictable.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer fade">
+  <div class="footer-content">
+    <h3>KorOS</h3>
+    <p>Follow the project</p>
+
+    <div class="socials">
+      <a href="https://github.com/Nixxy-lv/KorOS"><i class="fa-brands fa-github"></i></a>
+      <a href="https://discord.gg/TvWBKNhU"><i class="fa-brands fa-discord"></i></a>
+      <a href="mailto:nixdev888@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <div class="copy">
+      © 2026 KorOS
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL FADE SCRIPT -->
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
