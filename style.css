@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #0b0b0f;
-  color: #eaeaea;
+  background-color: #f7f9fc;
+  color: #1a1a1a;
 }
 
 /* TOP BAR */
@@ -11,45 +11,67 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
-  background-color: #111;
-  border-bottom: 1px solid #222;
+  background-color: #ffffff;
+
+  /* darker but soft shadow */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
+  color: #1f3b57;
 }
 
 .nav-links a {
-  color: #ccc;
+  color: #2f4f6f;
   text-decoration: none;
   margin-left: 20px;
   transition: 0.2s;
+  font-weight: 500;
 }
 
 .nav-links a:hover {
-  color: white;
+  color: #1a73e8;
 }
 
-/* SECTIONS */
-section {
-  max-width: 900px;
-  margin: 80px auto;
+/* HERO WRAPPER */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin: 90px auto;
   padding: 0 20px;
 }
 
-/* HERO */
+/* ABSTRACT HERO CARD */
+.hero-card {
+  max-width: 900px;
+  padding: 50px 40px;
+  border-radius: 16px;
+
+  background:
+    radial-gradient(circle at top left, rgba(26, 115, 232, 0.18), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.08), transparent 60%),
+    #ffffff;
+
+  border: 1px solid #e3e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
   letter-spacing: -1px;
+  color: #1c2f44;
 }
 
 p {
   font-size: 18px;
-  color: #b5b5b5;
+  color: #4a5a6a;
   line-height: 1.6;
 }
 
@@ -61,8 +83,8 @@ p {
 }
 
 .down-btn a {
-  background: #ffffff;
-  color: #000;
+  background: #1a73e8;
+  color: white;
   padding: 12px 22px;
   border-radius: 8px;
   text-decoration: none;
@@ -71,8 +93,8 @@ p {
 }
 
 .down-btn a:hover {
+  background: #155fc0;
   transform: translateY(-2px);
-  background: #e6e6e6;
 }
 
 /* SCREENSHOT AREA */
@@ -80,7 +102,7 @@ p {
   max-width: 900px;
   margin: 0 auto 100px;
   height: 300px;
-  border: 1px solid #222;
+  border: 1px solid #dbe3ec;
   border-radius: 12px;
-  background: #111;
+  background: linear-gradient(135deg, #f9fbff, #eef4ff);
 }
